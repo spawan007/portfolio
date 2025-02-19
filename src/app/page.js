@@ -3,6 +3,7 @@ import Sidebar from "@/component/sidebar";
 import Description from "@/component/description";
 import Technology from "@/component/technology";
 import Projects from "@/component/projects";
+import Footer from "@/component/footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <div className="project-section">
           <Projects />
         </div>
+        <Footer />
       </div>
     </div>
   );

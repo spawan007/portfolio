@@ -1,6 +1,9 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <div className="header-section">
       <div className="header-content">
@@ -10,11 +13,11 @@ export default function Header() {
         </div> */}
         <div className="header-middle-section">
           <ol>
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Works</li>
-            <li>Contact</li>
+            <li onClick={()=>router.push('/')}>Home</li>
+            <li onClick={()=>router.push('/about')}>About</li>
+            <li onClick={()=>router.push('/service')}>Service</li>
+            <li onClick={()=>router.push('/works')}>Works</li>
+            <li onClick={()=>router.push('/contact')}>Contact</li>
           </ol>
         </div>
         <div className="header-right-section">

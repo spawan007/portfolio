@@ -10,7 +10,7 @@ export default function Technology() {
             <div className="brand-slider">
                 <div className="slider-track">
                     {[...Array(2)].map((_, i) => (
-                        <>
+                        <React.Fragment key={i+1}>
                             <Image key={i + "1"} src={'/techstack/aws.png'} width={100} height={60} alt="aws_image" />
                             <Image key={i + "2"} src={'/techstack/aws.png'} width={100} height={60} alt="aws_image" />
                             <Image key={i + "3"} src={'/techstack/aws.png'} width={100} height={60} alt="aws_image" />
@@ -20,7 +20,7 @@ export default function Technology() {
                             <Image key={i + "7"} src={'/techstack/aws.png'} width={100} height={60} alt="aws_image" />
                             <Image key={i + "8"} src={'/techstack/aws.png'} width={100} height={60} alt="aws_image" />
                             <Image key={i + "9"} src={'/techstack/aws.png'} width={100} height={60} alt="aws_image" />
-                        </>
+                        </React.Fragment>
                     ))}
                 </div>
             </div>

@@ -15,7 +15,33 @@ export default function Projects() {
                 title: "B2B Custom Shipping",
                 image: "",
                 desc: "Developed custom shipping rates for a Marine Energy Store, supporting both B2B and B2C customers. The solution includes free shipping and pickup options for Australian customers, and calculated shipping for New Zealand. Custom attributes were created to store the specific shipping method used for each order. \n\nAdditionally, region-based shipping rates were implemented for Australian customers, providing a tailored delivery experience based on their location, ensuring cost-effective and personalized shipping options."
-            }, {
+            },
+            {
+                title: "Rebato",
+                image: "",
+                desc: "Created a Shopify public app enabling merchants to manage offers and discounts through the Shopify admin panel. Offers are displayed on the product and checkout pages via theme app and checkout UI extensions. Merchants can design custom offer popups, and the app syncs offers automatically via cron for real-time updates. \n\nA comprehensive dashboard allows merchants to track used, active, and invalid coupons, providing effective control over discount management and maximizing store sales."
+            },
+            {
+                title: "Rebato",
+                image: "",
+                desc: "Created a Shopify public app enabling merchants to manage offers and discounts through the Shopify admin panel. Offers are displayed on the product and checkout pages via theme app and checkout UI extensions. Merchants can design custom offer popups, and the app syncs offers automatically via cron for real-time updates. \n\nA comprehensive dashboard allows merchants to track used, active, and invalid coupons, providing effective control over discount management and maximizing store sales."
+            },
+            {
+                title: "Rebato",
+                image: "",
+                desc: "Created a Shopify public app enabling merchants to manage offers and discounts through the Shopify admin panel. Offers are displayed on the product and checkout pages via theme app and checkout UI extensions. Merchants can design custom offer popups, and the app syncs offers automatically via cron for real-time updates. \n\nA comprehensive dashboard allows merchants to track used, active, and invalid coupons, providing effective control over discount management and maximizing store sales."
+            },
+            {
+                title: "Rebato",
+                image: "",
+                desc: "Created a Shopify public app enabling merchants to manage offers and discounts through the Shopify admin panel. Offers are displayed on the product and checkout pages via theme app and checkout UI extensions. Merchants can design custom offer popups, and the app syncs offers automatically via cron for real-time updates. \n\nA comprehensive dashboard allows merchants to track used, active, and invalid coupons, providing effective control over discount management and maximizing store sales."
+            },
+            {
+                title: "Rebato",
+                image: "",
+                desc: "Created a Shopify public app enabling merchants to manage offers and discounts through the Shopify admin panel. Offers are displayed on the product and checkout pages via theme app and checkout UI extensions. Merchants can design custom offer popups, and the app syncs offers automatically via cron for real-time updates. \n\nA comprehensive dashboard allows merchants to track used, active, and invalid coupons, providing effective control over discount management and maximizing store sales."
+            },
+            {
                 title: "Rebato",
                 image: "",
                 desc: "Created a Shopify public app enabling merchants to manage offers and discounts through the Shopify admin panel. Offers are displayed on the product and checkout pages via theme app and checkout UI extensions. Merchants can design custom offer popups, and the app syncs offers automatically via cron for real-time updates. \n\nA comprehensive dashboard allows merchants to track used, active, and invalid coupons, providing effective control over discount management and maximizing store sales."
@@ -43,6 +69,7 @@ export default function Projects() {
                         <h2>
                             {project.title}
                         </h2>
+                        <p>{project.desc}</p>
                     </div>
                 )
                 )}
