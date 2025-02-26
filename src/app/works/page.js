@@ -7,10 +7,14 @@ import Footer from "@/component/footer";
 export default function Works() {
 
     return (
-        <div className="work-section">
+       
+<div className="containor">
+<div className="work-section">
             <Header />
             <Projects />
             <Footer />
         </div>
+</div>
+
     )
 }

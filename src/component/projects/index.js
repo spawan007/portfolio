@@ -60,16 +60,23 @@ export default function Projects() {
                     Check out some of my design projects, meticulously crafted with love and dedication, each one reflecting the passion and soul I poured into every detail.
                 </p>
             </div>
-            <div className="projects-content">
+            <div className="row project-masonry-active overflow-hidden projects-content">
                 {projects.map((project, ind) => (
-                    <div className="project-block" key={ind + 1}>
+                    <div className="col-lg-4 col-md-6 item branding game scaleUp" key={ind + 1}>
+
+                        <div className="project-block">
                         <div className="project-image">
                             {project.image}
+                            <a class="details-btn" href="/single-project"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="remixicon "><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg> </a>
                         </div>
+                       <div className="inner_block_content">
                         <h2>
                             {project.title}
                         </h2>
                         <p>{project.desc}</p>
+                        </div>
+
+                    </div>
                     </div>
                 )
                 )}

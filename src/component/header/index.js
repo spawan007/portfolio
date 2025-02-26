@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className="header-section">
-      <div className="header-content">
+    <div className="containor">
+      <div className="header-section ">
+      <div className="header-content ">
         <h1 className="header-left-section">Pawan</h1>
         {/* <div className="header-left-section">
           <img src="/portfolio-logo.jpeg" className="portfolio-logo" alt="portfolio-logo" />
@@ -26,5 +27,8 @@ export default function Header() {
         </div>
       </div>
     </div>
+    </div>
+
+    
   );
 }

@@ -6,7 +6,8 @@ import Footer from "@/component/footer";
 export default function Contact() {
 
     return (
-        <div className="contact-section">
+       <div className="container">
+         <div className="contact-section">
             <Header />
             <div className="contact-content">
                 <div className="contact-heading">
@@ -71,5 +72,6 @@ export default function Contact() {
             </div>
             <Footer />
         </div>
+       </div>
     )
 }
