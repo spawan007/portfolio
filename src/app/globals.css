@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-
 :root {
-  --main-color:  #9f9f9f;
+  --main-color: #9f9f9f;
   --heading-color: #fff;
   --primary-color: #eb5d3a;
   --lighter-color: #ccc;
@@ -15,8 +13,6 @@
   --grey-bg: #E6EAEE;
   --card-bg: #360b00;
 }
-
-
 
 * {
   margin: 0;
@@ -38,6 +34,13 @@ body {
   font-size: 16px;
   font-family: Poppins, sans-serif !important;
   overflow-x: hidden;
+}
+
+span.sub-detail {
+  font-size: 25px;
+  line-height: 45px;
+  margin-bottom: 0px;
+  font-weight: 300;
 }
 
 .sidebar-content img {
@@ -240,7 +243,7 @@ svg.remixicon {
   border-radius: 20px;
   box-shadow: #ffffff06 0 .362176px .651917px -1px inset, #ffffff09 0 3px 5.4px -2px inset;
   background-color: var(--card-bg);
-  border: 1px solid #77777d33; 
+  border: 1px solid #77777d33;
 }
 
 .desc-freelancing:before {
@@ -294,7 +297,7 @@ h6,
   color: #9f9f9f;
 }
 
-.desc-section button {
+.desc-section a {
   /* background: var(--primary-color); */
   color: #fff;
   cursor: pointer;
@@ -314,6 +317,12 @@ h6,
   align-items: center;
   gap: 5px;
   background: #eb5d3a;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.desc-section a:hover {
+  color: white;
 }
 
 
@@ -366,6 +375,7 @@ h6,
   margin-top: 30px;
   background-color: var(--card-bg);
   border: 1px solid #77777d33;
+  height: 186px;
 }
 
 
@@ -465,7 +475,7 @@ h6,
 .project-image:before {
   width: 100%;
   height: 250px;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
   content: "";
   position: absolute;
   top: 0;
@@ -702,12 +712,21 @@ h3.exp-year {
   margin-bottom: 0;
   color: #77777d;
 }
+
 .about-social ul li a:hover svg {
   color: var(--primary-color) !important;
 }
+
 .about-social ul li a:hover svg path {
   fill: var(--primary-color) !important;
 }
+
+.project-image-content {
+  width: inherit;
+  object-fit: cover;
+  height: inherit;
+}
+
 .service-block:hover {
   border-color: var(--primary-color);
   -webkit-transition: .5s;
@@ -722,9 +741,11 @@ h3.exp-year {
   background-color: var(--card-bg);
   border: 1px solid #77777d33;
 }
+
 .pricing-block:hover {
   background: #140300;
 }
+
 .pricing-heading p {
   font-size: 16px;
   padding: 0 30px;
@@ -786,7 +807,7 @@ span:after {
   font-size: 16px;
   font-weight: 400;
   color: var(--main-color);
-  content: "/Hour";
+  /* content: "/Hour"; */
 }
 
 .pricing-desc_row {
@@ -1002,11 +1023,12 @@ button.theme-btn i svg {
 
 @media (max-width: 990px) {
 
-  
-.service_container h1 {
-  font-size: 30px;
-  text-align: center;
-}
+
+  .service_container h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
   .contact-form {
     grid-template-columns: 1fr;
   }
@@ -1099,10 +1121,12 @@ button.theme-btn i svg {
   .project-header h1 {
     font-size: 30px;
   }
-  .self-description h2{
+
+  .self-description h2 {
     font-size: 30px;
     line-height: 40px;
   }
+
   .project-header p {
     font-size: 16px;
     padding: 0 0px;

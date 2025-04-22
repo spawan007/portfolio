@@ -1,14 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Header from "@/component/header";
-import Footer from "@/component/footer";
 
 export default function Service() {
 
     return (
-      
-         <div className="container">
-               <div className="service-section">
+        <div className="container">
+            <div className="service-section">
                 <Header />
                 <div className="service-content">
                     <div className="service_container">
@@ -174,9 +172,7 @@ export default function Service() {
 
                     </div>
                 </div>
-                <Footer />
-           
+            </div>
         </div>
-         </div>
     )
 }
