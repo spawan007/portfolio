@@ -71,7 +71,7 @@ export default function Projects() {
             </div>
             <div className="row project-masonry-active overflow-hidden projects-content">
                 {projects.map((project, ind) => (
-                    <div className="col-lg-4 col-md-6 item branding game scaleUp" key={ind + 1}>
+                    <div className="col-lg-4 col-md-6 item branding game scaleUp" key={ind + 1} data-aos="fade-up"  data-aos-duration="1000">
                         <div className="project-block">
                             <div className="project-image">
                                 <img src={project.image} className="project-image-content" alt="project-image" />

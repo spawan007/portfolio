@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Sidebar({ page_route }) {
     return (
-        <div className="sidebar-section" data-aos="flip-left">
+        <div className="sidebar-section" data-aos="flip-left"  data-aos-duration="1000">
             <div className="sidebar-content">
                 <div className="main_profile_photo">
                     <Image src={"/portfolio-profile.png"} width={400} height={400} alt="profile_image" />

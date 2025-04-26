@@ -6,7 +6,7 @@ export default function Footer({ contact }) {
     const router = useRouter();
 
     return (
-        <div className="footer-section" data-aos="fade-up" data-aos-duration="500">
+        <div className="footer-section" data-aos="fade-up" data-aos-duration="1000">
             <div className="footer-content">
                 {!contact && <h1>Ready to bring your project to life with a dash of innovation?</h1>}
                 <p>

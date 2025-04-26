@@ -3,7 +3,7 @@ import React from "react";
 export default function Description() {
 
     return (
-        <div className="desc-section" data-aos="fade-up" data-aos-duration="500">
+        <div className="desc-section" data-aos="fade-up" data-aos-duration="1000">
             <p>Hi</p>
             <h1>I’m Pawan Kumar <br /><span className="sub-detail">A full-stack developer specializing in building React and Shopify applications.</span></h1>
             <div className="desc-freelancing">
