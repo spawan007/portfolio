@@ -2,20 +2,22 @@
 import React, { useEffect, useState } from "react";
 import Header from "@/component/header";
 import Footer from "@/component/footer";
+import Aos from "aos";
 
 export default function Contact() {
+    useEffect(()=>{
+            Aos.init();;
+        }, []);
 
     return (
-       <div className="container">
-         <div className="contact-section">
-            <Header />
-            <div className="contact-content">
-                <div className="contact-heading">
-                    <p>Contact</p>
-                    <h2> Get in Touch with Me!</h2>
-                </div>
-                <div className="contact-form">
-                    <div className="contact-add-section">
+        <div className="container">
+            <div className="contact-section">
+                <Header />
+                <div className="contact-content">
+                    <div className="contact-heading">
+                        <h2> Get in Touch with Me!</h2>
+                    </div>
+                    <div className="contact-form" data-aos="fade-up" data-aos-duration="1000">
                         <div className="contact-add-block">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="remixicon "><path d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"></path>
                             </svg>
@@ -34,44 +36,9 @@ export default function Contact() {
                             <span>info.techbeast.ai@gmail.com</span>
                         </div>
                     </div>
-                    <div className="contact-form-section">
-                        <div className="row"><div className="col-md-6">
-                            <div className="form-group">
-                                <label htmlFor="name">Full Name</label>
-                                <input type="text" id="name" name="name" className="form-control" placeholder="Steve Milner" value="" onChange={() => ""} />
-                                <label htmlFor="name" >
-                                    <i className="far fa-user"></i>
-                                </label>
-                            </div>
-                        </div>
-                            <div className="col-md-6">
-                                <div className="form-group">
-                                    <label htmlFor="email">Email Address</label>
-                                    <input type="email" id="email" name="email" className="form-control" placeholder="hello@websitename.com" value="" onChange={() => ""} />
-                                    <label htmlFor="email" >
-                                        <i className="far fa-envelope"></i>
-                                    </label>
-                                </div>
-                            </div>
-                            <div className="col-md-12">
-                                <div className="form-group">
-                                    <label htmlFor="message">Your Message</label>
-                                    <textarea name="message" id="message" className="form-control" rows="4" placeholder="Write Your message" onChange={() => ""}>
-                                    </textarea>
-                                </div>
-                            </div>
-                            <div className="col-md-12">
-                                <div className="form-group mb-0">
-                                    <button type="submit" className="theme-btn">Send Me Message <i><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" className="remixicon "><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM20 7.23792L12.0718 14.338L4 7.21594V19H20V7.23792ZM4.51146 5L12.0619 11.662L19.501 5H4.51146Z"></path></svg></i></button><div id="msgSubmit" className="hidden">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Footer contact={true} />
                 </div>
             </div>
-            <Footer />
         </div>
-       </div>
     )
 }

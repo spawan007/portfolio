@@ -3,11 +3,11 @@ import React from "react";
 export default function Description() {
 
     return (
-        <div className="desc-section">
+        <div className="desc-section" data-aos="fade-up" data-aos-duration="500">
             <p>Hi</p>
             <h1>I’m Pawan Kumar <br /><span className="sub-detail">A full-stack developer specializing in building React and Shopify applications.</span></h1>
             <div className="desc-freelancing">
-                <p>Open to freelance opportunities and new collaborations</p>
+                <p>Open to opportunities and new collaborations</p>
             </div>
             <a href="/cv/cv.pdf" download className="download-btn">
                 Download CV

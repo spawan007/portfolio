@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     useEffect(() => {
         const allProjects = [
@@ -45,24 +47,42 @@ export default function Projects() {
         setProjects(allProjects);
     }, []);
 
+    const openModal = (project) => {
+        setSelectedProject(project);
+        setShowModal(true);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+        setSelectedProject(null);
+        document.body.style.overflow = 'auto';
+    };
+
     return (
-        <div className="project-section">
+        <div className="project-section ">
             <div className="project-header">
                 <h1>
                     Works & Projects
                 </h1>
                 <p>
-                Explore some of my full-stack development projects, thoughtfully built with precision and care. Each project showcases my commitment to delivering high-quality, functional, and seamless experiences across both front-end and back-end technologies.
+                    Explore some of my full-stack development projects, thoughtfully built with precision and care. Each project showcases my commitment to delivering high-quality, functional, and seamless experiences across both front-end and back-end technologies.
                 </p>
             </div>
             <div className="row project-masonry-active overflow-hidden projects-content">
                 {projects.map((project, ind) => (
                     <div className="col-lg-4 col-md-6 item branding game scaleUp" key={ind + 1}>
-
                         <div className="project-block">
                             <div className="project-image">
                                 <img src={project.image} className="project-image-content" alt="project-image" />
-                                <a className="details-btn" href="/single-project">
+                                <a
+                                    className="details-btn"
+                                    href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        openModal(project);
+                                    }}
+                                >
                                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="remixicon">
                                         <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path>
                                     </svg>
@@ -73,11 +93,26 @@ export default function Projects() {
                                 <p>{project.desc}</p>
                             </div>
                         </div>
-
                     </div>
                 ))}
             </div>
 
+            {showModal && selectedProject && (
+                <div className={`modal-overlay ${showModal ? 'active' : ''}`} onClick={closeModal}>
+                    <div
+                        className="modal-content"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="modal-left">
+                            <img src={selectedProject.image} alt={selectedProject.title} />
+                        </div>
+                        <div className="modal-right">
+                            <h2>{selectedProject.title}</h2>
+                            <p>{selectedProject.desc}</p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
-    )
+    );
 }

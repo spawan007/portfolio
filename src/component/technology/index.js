@@ -3,14 +3,14 @@ import Image from "next/image";
 
 export default function Technology() {
     return (
-        <div className="brands-section">
+        <div className="brands-section" data-aos="fade-up" data-aos-duration="500">
             <h2 className="brand-heading">
                 Stacks
             </h2>
             <div className="brand-slider">
                 <div className="slider-track">
                     {[...Array(2)].map((_, i) => (
-                        <React.Fragment key={i+1}>
+                        <React.Fragment key={i + 1}>
                             <Image key={i + "1"} src={'/techstack/shopify.png'} width={200} height={60} alt="aws_image" />
                             <Image key={i + "2"} src={'/techstack/angular.png'} width={100} height={60} alt="aws_image" />
                             <Image key={i + "3"} src={'/techstack/github.png'} width={100} height={60} alt="aws_image" />
